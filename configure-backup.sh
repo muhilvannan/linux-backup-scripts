@@ -2,10 +2,15 @@
 if [ ! -d "/root/.backup_config" ]; then
         mkdir /root/.backup_config
 fi
-read -p "Enter local backup directory name : " DIRECTORY
+read -p "Enter local backup directory name [/backup]: " DIRECTORY
 read -p "Enter bucket name to backup to [NONE]: " awsbucket
 read -p "Enter Mysql username [NONE]: " mysqlusername
 read -s -p "Enter password [NONE]: " mysqlpwd
+
+if [ $DIRECTORY == "" ]; then
+    $DIRECTORY="/backup"
+fi
+
 echo "backupdir=\"$DIRECTORY\"
 username=\"$mysqlusername\"
 pass=\"$mysqlpwd\"
