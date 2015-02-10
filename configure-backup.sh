@@ -7,8 +7,8 @@ read -p "Enter bucket name to backup to [NONE]: " awsbucket
 read -p "Enter Mysql username [NONE]: " mysqlusername
 read -s -p "Enter password [NONE]: " mysqlpwd
 
-if [ $DIRECTORY == "" ]; then
-    $DIRECTORY="/backup"
+if [[ -z "$DIRECTORY" ]]; then
+    DIRECTORY="/backup"
 fi
 
 echo "backupdir=\"$DIRECTORY\"
