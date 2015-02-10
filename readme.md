@@ -30,4 +30,4 @@ This repo is a collection of backup configuration scripts for centos machines
 
 ```
 
-*  PLEASE NOTE : Requirement: aws cli tools need to have been installed and configured beforehand on the server fro s3 backup
+*  PLEASE NOTE : Requirement: aws cli tools need to have been installed and configured beforehand on the server for s3 backups
