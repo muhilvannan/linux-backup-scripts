@@ -75,5 +75,5 @@ else
     fi
 fi
 
-echo -e "\n Configured backups - please setup cron tasks"
+echo -e "\n Configured backup scripts - please setup cron tasks as required"
 
